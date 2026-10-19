@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Kosmedix Shop</title>
-<meta name="description" content="A curated shop of trending beauty and skincare, October 2026.">
+<meta name="description" content="Premium, hyped skincare arranged by the Korean skin-first routine, from authorized sellers that ship to Canada.">
 <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -88,6 +88,14 @@ h1{font-size:40px;line-height:1.05;letter-spacing:-.025em;font-weight:700;margin
 .shop:active{transform:scale(.96);opacity:.85}
 .src{font-size:12px;color:var(--faint);margin-top:12px}
 .src a{color:inherit}
+.step{margin:34px 0 0;scroll-margin-top:120px}
+.step:first-of-type{margin-top:8px}
+.step-head{display:flex;align-items:baseline;gap:12px;margin:0 0 4px}
+.step-no{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--pill-on);color:var(--pill-on-text);font-size:14px;font-weight:600;display:inline-flex;align-items:center;justify-content:center;transform:translateY(-3px)}
+.step h2.t{font-size:28px;line-height:1.1;letter-spacing:-.02em;font-weight:700;margin:0}
+.step .ex{font-size:15px;color:var(--muted);margin:2px 0 16px 42px}
+.step .grid{margin-bottom:0}
+.pick{position:absolute;right:12px;top:12px;font-size:12px;font-weight:600;color:#fff;background:linear-gradient(135deg,#ff6a3d,#e0245e);padding:4px 10px;border-radius:999px;box-shadow:0 1px 3px rgba(0,0,0,.12)}
 .empty{text-align:center;color:var(--muted);padding:60px 0;display:none}
 footer{font-size:12px;color:var(--faint);padding:10px 0 50px;border-top:1px solid var(--line);margin-top:10px}
 footer p{margin:12px 0 0}
@@ -96,9 +104,9 @@ footer p{margin:12px 0 0}
 <body>
 <div class="wrap">
   <header class="hero">
-    <p class="eyebrow">Trending · October 2026</p>
+    <p class="eyebrow">The Korean routine · Skincare only</p>
     <h1>Kosmedix Shop</h1>
-    <p class="sub">The beauty and skincare everyone's talking about right now, hand-picked from TikTok Shop data and the latest beauty coverage.</p>
+    <p class="sub">Premium, genuinely hyped skincare, laid out in Korean skin-first order. Every pick comes from the brand or an authorized retailer that ships to Canada.</p>
   </header>
 </div>
 <div class="bar" id="bar">
@@ -108,290 +116,326 @@ footer p{margin:12px 0 0}
       <input id="q" type="search" placeholder="Search products or brands" autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="search" aria-label="Search">
       <button class="clear" id="clear" aria-label="Clear search">✕</button>
     </div>
-    <nav class="pills" id="pills" aria-label="Categories"></nav>
+    <nav class="pills" id="pills" aria-label="Routine steps"></nav>
   </div>
 </div>
 <main class="wrap">
   <p class="meta" id="meta"></p>
-  <ul class="grid" id="grid"></ul>
+  <div id="grid"></div>
   <p class="empty" id="empty">No matches. Try another search.</p>
   <footer>
-    <p>Prices are shown as listed, in their own currency. Anything marked “unverified” came from a search listing, so double-check it before buying.</p>
-    <p>Curated October 2026.</p>
+    <p>Prices are shown as listed, in CAD where the store offers it (anua.com charges in USD). Anything marked “search listing” or “confirm on page” wasn’t readable on the live page, so double-check it before buying. Layer thinnest to thickest: you don’t need every step every day.</p>
+    <p>Curated October 2026 for Cape Breton, Nova Scotia.</p>
   </footer>
 </main>
 <script>
 const PRODUCTS = [
  {
-  "Product": "BEAUTECH DRYER SMART W (multi-voltage)",
-  "Brand": "ReFa",
-  "Category": "Haircare",
-  "Link": "https://www.refa.net/en/item/refa_beautech_dryer_smart_w/",
-  "Price": "Not listed (official product page; no Canadian retailer found)",
-  "Why it's trending": "'refa hair dryer' was the #1 beauty search on TikTok in the week to Oct 5 (530k searches, up 11%).",
-  "Source": "https://tokconnect.com/trends/products/beauty/",
+  "Product": "Gentle Cleansing Oil",
+  "Brand": "Sulwhasoo",
+  "Category": "Skincare",
+  "Link": "https://www.sephora.com/ca/en/product/gentle-cleansing-oil-P450633",
+  "Price": "CA$54.00 (200 mL, Sephora Canada)",
+  "Why it's trending": "Sulwhasoo's cult first cleanse. Allure 2024 Best of Beauty winner, melts waterproof makeup and SPF without stripping.",
+  "Source": "https://www.sephora.com/ca/en/product/gentle-cleansing-oil-P450633",
   "Status": "Trending",
-  "img": "img/p01.jpg"
+  "Routine step": "1 Oil cleanser",
+  "img": "img/p25.jpg"
  },
  {
-  "Product": "Scalp Stimulator Hair Growth Oil",
-  "Brand": "Bask & Lather",
-  "Category": "Haircare",
-  "Link": "https://baskandlatherco.com/products/scalp-stimulator",
-  "Price": "US$19.99",
-  "Why it's trending": "A rosemary-mint growth oil that built a 9-figure business on TikTok Shop and stays a top seller.",
-  "Source": "https://www.beautyindependent.com/how-bask-and-lather-tiktok-shop-nine-figure-business/",
-  "Status": "Trending",
-  "img": "img/p02.jpg"
- },
- {
-  "Product": "PDRN Hyaluronic Acid 100 Moisturizing Cream",
+  "Product": "Heartleaf Pore Control Cleansing Oil",
   "Brand": "Anua",
   "Category": "Skincare",
-  "Link": "https://anua.com/products/pdrn-hyaluronic-acid-100-moisturizing-cream",
-  "Price": "US$31.00",
-  "Why it's trending": "Kendall Jenner is a fan, more than 100k sold on Amazon last month, and it was a big October Prime Day deal.",
-  "Source": "https://pagesix.com/2026/10/06/style/kendall-jenner-anua-pdrn-cream-is-38-off-at-october-prime-day/",
+  "Link": "https://www.sephora.com/ca/en/product/heartleaf-pore-control-cleansing-oil-200ml-P521433",
+  "Price": "CA$28.00 (200 mL, Sephora Canada)",
+  "Why it's trending": "The viral K-beauty double-cleanse oil. Heartleaf calms while it lifts sebum and sunscreen.",
+  "Source": "https://www.sephora.com/ca/en/product/heartleaf-pore-control-cleansing-oil-200ml-P521433",
   "Status": "Trending",
-  "img": "img/p03.jpg"
+  "Routine step": "1 Oil cleanser",
+  "img": ""
  },
  {
-  "Product": "Underglaze Long-Wear PDRN Grippy Primer",
-  "Brand": "ICONIC London",
-  "Category": "Makeup",
-  "Link": "https://www.sephora.com/ca/en/product/underglaze-long-wear-pdrn-grippy-primer-with-hyaluronic-acid-P525208",
-  "Price": "CA$44.00 (Sephora Canada)",
-  "Why it's trending": "TikTok hype for glass-skin makeup. A PDRN, niacinamide and HA 'grippy' primer that Marie Claire reviewed on Oct 2.",
-  "Source": "https://www.marieclaire.com/beauty/makeup/iconic-london-underglow-pdrn-grippy-primer-review/",
+  "Product": "Ginseng Cleansing Oil",
+  "Brand": "Beauty of Joseon",
+  "Category": "Skincare",
+  "Link": "https://ca.beautyofjoseon.com/products/ginseng-cleansing-oil",
+  "Price": "CA$22.40 (210 mL, BoJ Canada official)",
+  "Why it's trending": "Hanbang-style ginseng and soybean oil cleanser from one of K-beauty's most hyped brands.",
+  "Source": "https://ca.beautyofjoseon.com/products/ginseng-cleansing-oil",
   "Status": "Trending",
-  "img": "img/p04.jpg"
+  "Routine step": "1 Oil cleanser",
+  "img": "img/p27.jpg"
  },
  {
-  "Product": "Matcha Milk Body Mist",
-  "Brand": "PHLUR",
-  "Category": "Fragrance",
-  "Link": "https://phlur.com/en-ca/products/matcha-milk-body-mist",
-  "Price": "Not shown (8 oz / 3 oz; may be sold out)",
-  "Why it's trending": "A new matcha-vanilla gourmand mist that Marie Claire tips to go TikTok-viral. People now shop fragrance by note, like 'matcha'.",
-  "Source": "https://www.marieclaire.com/beauty/fragrance/phlur-matcha-milk-berry-cream-body-mist-review/",
+  "Product": "Gentle Cleansing Foam",
+  "Brand": "Sulwhasoo",
+  "Category": "Skincare",
+  "Link": "https://www.sephora.com/ca/en/product/gentle-cleansing-foam-P507894",
+  "Price": "CA$17–88 by size; 200 mL listed at CA$38 (search listing, confirm on page)",
+  "Why it's trending": "The luxury second cleanse: gel-to-foam with Korean herbs, 1K+ reviews at Sephora.",
+  "Source": "https://www.sephora.com/ca/en/brand/sulwhasoo",
   "Status": "Trending",
-  "img": "img/p05.jpg"
+  "Routine step": "2 Water cleanser",
+  "img": ""
+ },
+ {
+  "Product": "Green Plum Refreshing Cleanser",
+  "Brand": "Beauty of Joseon",
+  "Category": "Skincare",
+  "Link": "https://ca.beautyofjoseon.com/products/green-plum-refreshing-cleanser",
+  "Price": "CA$15.75 (100 mL, BoJ Canada official)",
+  "Why it's trending": "Low-pH gel cleanser loved for clean-but-not-tight skin.",
+  "Source": "https://ca.beautyofjoseon.com/products/green-plum-refreshing-cleanser",
+  "Status": "Trending",
+  "Routine step": "2 Water cleanser",
+  "img": "img/p29.jpg"
+ },
+ {
+  "Product": "Zero Pore Pads",
+  "Brand": "medicube",
+  "Category": "Skincare",
+  "Link": "https://medicube.us/products/zero-pore-pad-1",
+  "Price": "CA$35.00 (single pack, medicube official, CAD checkout, ships to Canada)",
+  "Why it's trending": "medicube's best-selling AHA/BHA toner pads for pores and texture.",
+  "Source": "https://medicube.us/products/zero-pore-pad-1",
+  "Status": "Trending",
+  "Routine step": "3 Exfoliator",
+  "img": "img/p30.jpg"
+ },
+ {
+  "Product": "Heartleaf 77 Clear Pad",
+  "Brand": "Anua",
+  "Category": "Skincare",
+  "Link": "https://anua.com/products/heartleaf-77-toner-pad-160ml",
+  "Price": "US$23.00 (Anua official, ships to Canada, USD)",
+  "Why it's trending": "Gentle PHA/BHA exfoliating pads from the Heartleaf 77 line.",
+  "Source": "https://anua.com/products/heartleaf-77-toner-pad-160ml",
+  "Status": "Trending",
+  "Routine step": "3 Exfoliator",
+  "img": "img/p31.jpg"
+ },
+ {
+  "Product": "Cream Skin Milky Toner",
+  "Brand": "LANEIGE",
+  "Category": "Skincare",
+  "Link": "https://www.sephora.com/ca/en/product/cream-skin-refillable-toner-moisturizer-with-ceramides-peptides-P505897",
+  "Price": "CA$22–65 by size (Sephora Canada)",
+  "Why it's trending": "Allure 2023 Best of Beauty milky toner with ceramides and peptides. One of LANEIGE's best sellers.",
+  "Source": "https://www.sephora.com/ca/en/brand/laneige",
+  "Status": "Trending",
+  "Routine step": "4 Toner",
+  "img": ""
+ },
+ {
+  "Product": "Heartleaf 77 Soothing Toner",
+  "Brand": "Anua",
+  "Category": "Skincare",
+  "Link": "https://anua.com/products/heartleaf-77-soothing-toner",
+  "Price": "US$23.00 (250 mL, Anua official, ships to Canada, USD)",
+  "Why it's trending": "The toner that made Anua famous on TikTok. 77% heartleaf to calm redness.",
+  "Source": "https://anua.com/products/heartleaf-77-soothing-toner",
+  "Status": "Trending",
+  "Routine step": "4 Toner",
+  "img": "img/p33.jpg"
  },
  {
   "Product": "Advanced Snail 96 Mucin Power Essence",
   "Brand": "COSRX",
   "Category": "Skincare",
   "Link": "https://www.sephora.com/ca/en/product/advance-snail-96-mucin-power-essence-P519125",
-  "Price": "CA$29 (unverified, Sephora CA search listing)",
+  "Price": "CA$29.00 (Sephora Canada)",
   "Why it's trending": "A long-running TikTok viral hydrating essence, and a top beauty deal this October Prime Day.",
   "Source": "https://www.goodhousekeeping.com/what-to-buy/a74065388/cosrx-snail-mucin-review-prime-day/",
   "Status": "Trending",
+  "Routine step": "5 Essence",
   "img": "img/p06.jpg"
  },
  {
-  "Product": "Mask Fit Red Cushion",
-  "Brand": "TIRTIR",
-  "Category": "Makeup",
-  "Link": "https://tirtir.global/products/mask-fit-red-cushion",
-  "Price": "US$20.00 (reg. US$25.00)",
-  "Why it's trending": "A relentlessly hyped TikTok cushion foundation, now in 40 shades after its viral shade-range push.",
-  "Source": "https://www.livethatglow.com/tirtir-mask-fit-red-cushion-review/",
-  "Status": "Trending",
-  "img": "img/p07.jpg"
- },
- {
-  "Product": "Make Me Blush Cream, #44 Nude Lavallière",
-  "Brand": "YSL Beauty",
-  "Category": "Makeup",
-  "Link": "https://www.yslbeauty.ca/en_CA/makeup/face-makeup/blush/make-me-blush-cream/WW-51628YSL.html?dwvar_WW-51628YSL_color=44_nude_lavalliere_02",
-  "Price": "CA$61.00",
-  "Why it's trending": "'ysl blush 44' had about 296k TikTok searches in the week to Oct 5, up 35%.",
-  "Source": "https://tokconnect.com/trends/products/beauty/",
-  "Status": "Trending",
-  "img": "img/p08.jpg"
- },
- {
-  "Product": "Pocket Pearl (Monaco)",
-  "Brand": "rhode",
-  "Category": "Makeup",
-  "Link": "https://www.rhodeskin.com/products/pocket-pearl-monaco",
-  "Price": "US$16 (unverified, from search listing)",
-  "Why it's trending": "Who What Wear's #1 new launch this month: a limited-edition shimmer mini blush made with Alexandra Leclerc. Monet and Gemini are sold out.",
-  "Source": "https://www.whowhatwear.com/uk/best-new-beauty-products",
-  "Status": "Trending",
-  "img": "img/p09.jpg"
- },
- {
-  "Product": "Cheirosa '62 Bum Bum Hair & Body Perfume Mist",
-  "Brand": "Sol de Janeiro",
-  "Category": "Fragrance",
-  "Link": "https://www.sephora.com/ca/en/product/brazilian-crush-body-fragrance-mist-P417312",
-  "Price": "CA$53 for 240 mL (unverified, Sephora CA search listing)",
-  "Why it's trending": "The pistachio-caramel TikTok mist that keeps going viral. Pistachio is fall 2026's loudest fragrance note.",
-  "Source": "https://gulfnews.com/best-buys/sol-de-janeiro-cheirosa-62-review-the-viral-body-mist-that-still-earns-compliments-1.500629169",
-  "Status": "Trending",
-  "img": "img/p10.jpg"
- },
- {
-  "Product": "Silk Peptide EGF Intensive Smoothing Toner (\"EGF Tox Toner\")",
-  "Brand": "Sungboon Editor",
+  "Product": "First Care Activating Serum",
+  "Brand": "Sulwhasoo",
   "Category": "Skincare",
-  "Link": "https://sungbooneditor.com/products/silk-peptide-egf-intensive-smoothing-toner",
-  "Price": "US$30.00 (reg. US$35.00)",
-  "Why it's trending": "New entry in the US TikTok Shop top 10 for the week ending Oct 4. Up 161% month on month as a 'forehead line' firming toner.",
-  "Source": "https://www.z.media/insights/tiktok-shop-us-trending-week-ending-2026-10-04",
+  "Link": "https://www.sephora.com/ca/en/product/sulwhasoo-first-care-activating-serum-ad-P469538",
+  "Price": "CA$34–120 by size; 60 mL CA$120 (Sephora Canada)",
+  "Why it's trending": "Korea's iconic luxury first step after cleansing. 89K+ loves at Sephora, with ginseng to prep skin for everything after.",
+  "Source": "https://www.sephora.com/ca/en/brand/sulwhasoo",
   "Status": "Trending",
-  "img": "img/p11.jpg"
+  "Routine step": "5 Essence",
+  "img": ""
  },
  {
-  "Product": "Lip Liner STAY-N Peel-Off Lip Stain",
-  "Brand": "Sacheu",
-  "Category": "Makeup",
-  "Link": "https://sacheu.com/products/lip-liner-stay-n-peel-off-lip-liner-tattoo",
-  "Price": "~US$14 (unverified, per review)",
-  "Why it's trending": "A viral peel-off liner, boosted by Billie Eilish's GRWM. It started the peel-off lip category.",
-  "Source": "https://trendhunter.blog/sacheu-lip-liner-stay-n-peel-review/",
-  "Status": "Trending",
-  "img": "img/p12.jpg"
- },
- {
-  "Product": "Wonder Blading All-Day Lip Stain",
-  "Brand": "Wonderskin",
-  "Category": "Makeup",
-  "Link": "https://www.sephora.com/ca/en/product/wonderskin-wonder-blading-all-day-lip-stain-P519525",
-  "Price": "~CA$22–23 (unverified)",
-  "Why it's trending": "Owns the viral peel-off 'blading' lip stain format. Transfer-proof all-day colour.",
-  "Source": "https://eaudera.com/i-tested-it-wonderskin-lip-stain-reviews/",
-  "Status": "Trending",
-  "img": "img/p13.jpg"
- },
- {
-  "Product": "Rapunzel Pre-Wash Hair Growth Oil",
-  "Brand": "Hair Syrup",
-  "Category": "Haircare",
-  "Link": "https://hairsyrup.co.uk/products/hair-syrup-rapunzel",
-  "Price": "£15.95 (unverified; UK site, Canada shipping not confirmed)",
-  "Why it's trending": "The biggest TikTok hair-oil brand of 2026, driven by viral before-and-after growth videos.",
-  "Source": "https://www.marieclaire.co.uk/beauty/hair/hair-syrup-review",
-  "Status": "Trending",
-  "img": "img/p14.jpg"
- },
- {
-  "Product": "ATOBARRIER365 Cream",
-  "Brand": "Aestura",
+  "Product": "Ginseng Essence Water",
+  "Brand": "Beauty of Joseon",
   "Category": "Skincare",
-  "Link": "https://www.sephora.com/ca/en/product/atobarrier365-cream-with-ceramides-niacinamide-for-skin-moisture-barrier-repair-P515494",
-  "Price": "Not verified (Sephora CA page blocked checks)",
-  "Why it's trending": "One of Sephora's fastest-growing skincare brands, leading K-beauty's push into the dermatologist category.",
-  "Source": "https://www.personalcareinsights.com/news/k-beauty-sephora-us-market.html",
+  "Link": "https://ca.beautyofjoseon.com/products/ginseng-essence-water",
+  "Price": "CA$19.43 (150 mL, BoJ Canada official)",
+  "Why it's trending": "Watery ginseng essence that layers like a toner and hydrates like an essence.",
+  "Source": "https://ca.beautyofjoseon.com/products/ginseng-essence-water",
   "Status": "Trending",
-  "img": "img/p15.jpg"
+  "Routine step": "5 Essence",
+  "img": "img/p35.jpg"
+ },
+ {
+  "Product": "Age Perfect Cell Renewal Midnight Serum (30 ml)",
+  "Brand": "L'Oréal Paris",
+  "Category": "Skincare",
+  "Link": "https://www.amazon.ca/dp/B09742Q1PP?m=A3DWYIK6Y9EEQB",
+  "Price": "CA$49.29 (shipped and sold by Amazon.ca)",
+  "Why it's trending": "Isaiah's favourite night serum. Antioxidants, hyaluronic acid and LHA, with 2,400+ ratings on Amazon.ca.",
+  "Source": "https://www.amazon.ca/dp/B09742Q1PP",
+  "Status": "Masterflame pick",
+  "Routine step": "6 Serum/Ampoule",
+  "img": ""
  },
  {
   "Product": "PDRN Pink Peptide Serum",
   "Brand": "medicube",
   "Category": "Skincare",
   "Link": "https://medicube.us/products/rose-pdrn-pink-peptide-serum",
-  "Price": "Not shown on page (US official site)",
+  "Price": "CA$35.00 (medicube official, CAD checkout, ships to Canada)",
   "Why it's trending": "One of the most-posted K-beauty serums on TikTok this month. Salmon-DNA PDRN plus niacinamide makes it a glass-skin routine staple.",
   "Source": "https://www.kbeautycodes.com/medicube-pdrn-pink-peptide-serum-tiktok-trend",
   "Status": "Trending",
+  "Routine step": "6 Serum/Ampoule",
   "img": "img/p16.jpg"
- },
- {
-  "Product": "Kojic Acid Turmeric Brightening Body Wash (from the Smooth & Clear Body Care Set)",
-  "Brand": "medicube",
-  "Category": "Body",
-  "Link": "https://medicube.us/products/kojic-acid-turmeric-brightening-body-wash",
-  "Price": "US$22 (unverified, from search listing)",
-  "Why it's trending": "The Smooth & Clear Body Care Set it belongs to was the #1 beauty product on US TikTok Shop in September ($4.9M, up 168%).",
-  "Source": "https://rapidtok.com/blog/10-best-selling-beauty-products-tiktok-shop-usa-september-2026",
-  "Status": "Trending",
-  "img": "img/p17.jpg"
- },
- {
-  "Product": "Cactus Fruit 3-in-1 Styling Cream",
-  "Brand": "dae",
-  "Category": "Haircare",
-  "Link": "https://www.sephora.com/ca/en/product/dae-cactus-flower-3-in-1-styling-cream-P482668",
-  "Price": "CA$46 (unverified, Sephora CA search listing)",
-  "Why it's trending": "One of Sephora's handful of breakout hero SKUs. Dae is gaining haircare share.",
-  "Source": "https://www.gcimagazine.com/brands-products/bath-body/article/22959600/the-new-rules-of-winning-at-sephoracategory-by-category",
-  "Status": "Trending",
-  "img": "img/p18.jpg"
- },
- {
-  "Product": "Lip Butter Balm",
-  "Brand": "Summer Fridays",
-  "Category": "Makeup",
-  "Link": "https://www.sephora.com/ca/en/product/summer-fridays-lip-butter-balm-P455936",
-  "Price": "CA$32.50 (unverified, Sephora Canada listing on Instacart)",
-  "Why it's trending": "The top-performing SKU across Sephora makeup and skincare (Navigo analysis). Lip and skin hybrid products are outselling classic makeup.",
-  "Source": "https://www.gcimagazine.com/brands-products/bath-body/article/22959600/the-new-rules-of-winning-at-sephoracategory-by-category",
-  "Status": "Trending",
-  "img": "img/p19.jpg"
- },
- {
-  "Product": "Gloss Absolu Glaze Drops Hair Oil",
-  "Brand": "Kérastase",
-  "Category": "Haircare",
-  "Link": "https://www.sephora.com/ca/en/product/gloss-absolu-glaze-drops-high-shine-hair-oil-P515649",
-  "Price": "CA$65 (unverified, Sephora CA search listing)",
-  "Why it's trending": "Trending glossy hair oil on TikTok. Kérastase posted one of the strongest share gains at Sephora.",
-  "Source": "https://www.gcimagazine.com/brands-products/bath-body/article/22959600/the-new-rules-of-winning-at-sephoracategory-by-category",
-  "Status": "Trending",
-  "img": "img/p20.jpg"
  },
  {
   "Product": "Glow Serum: Propolis + Niacinamide",
   "Brand": "Beauty of Joseon",
   "Category": "Skincare",
   "Link": "https://ca.beautyofjoseon.com/products/glow-serum-propolis-niacinamide",
-  "Price": "CA$20.25 (reg. CA$27.00)",
+  "Price": "CA$20.25 (30 mL, reg. CA$27.00)",
   "Why it's trending": "Shows up constantly in TikTok glass-skin and PDRN serum side-by-sides.",
   "Source": "https://www.kbeautycodes.com/medicube-pdrn-pink-peptide-serum-tiktok-trend",
   "Status": "Trending",
+  "Routine step": "6 Serum/Ampoule",
   "img": "img/p21.jpg"
  },
  {
-  "Product": "Vanilla | 28 Eau de Parfum",
-  "Brand": "KAYALI",
-  "Category": "Fragrance",
-  "Link": "https://kayali.com/en-ca/products/vanilla-28",
-  "Price": "CA$203 (100 mL) / CA$142 (50 mL) / CA$39 (10 mL travel)",
-  "Why it's trending": "A Sephora hero SKU from a brand gaining fragrance share, right on fall's cozy-vanilla gourmand trend.",
-  "Source": "https://www.gcimagazine.com/brands-products/bath-body/article/22959600/the-new-rules-of-winning-at-sephoracategory-by-category",
+  "Product": "Bio-Collagen Real Deep Mask",
+  "Brand": "Biodance",
+  "Category": "Skincare",
+  "Link": "https://www.sephora.com/ca/en/product/bio-collagen-real-deep-mask-for-pore-minimizing-firming-care-P518859",
+  "Price": "CA$26.00 (4 masks, Sephora Canada)",
+  "Why it's trending": "The viral overnight collagen hydrogel mask that turns clear as it absorbs.",
+  "Source": "https://www.sephora.com/ca/en/brand/biodance",
   "Status": "Trending",
-  "img": "img/p22.jpg"
+  "Routine step": "7 Sheet mask",
+  "img": ""
  },
  {
-  "Product": "Putty Blush",
-  "Brand": "e.l.f.",
-  "Category": "Makeup",
-  "Link": "https://ca.elfcosmetics.com/products/putty-blush",
-  "Price": "CA$10",
-  "Why it's trending": "'Putty blush' was the #2 beauty search on TikTok in the week to Oct 5 (461k searches).",
-  "Source": "https://tokconnect.com/trends/products/beauty/",
+  "Product": "PDRN Pink Peptide Ampoule Mask",
+  "Brand": "medicube",
+  "Category": "Skincare",
+  "Link": "https://medicube.us/products/pdrn-pink-peptide-ampoule-mask",
+  "Price": "CA$19.00 (6 masks, medicube official, CAD checkout, ships to Canada)",
+  "Why it's trending": "Sheet-mask version of medicube's hyped PDRN peptide serum.",
+  "Source": "https://medicube.us/products/pdrn-pink-peptide-ampoule-mask",
   "Status": "Trending",
-  "img": "img/p23.jpg"
+  "Routine step": "7 Sheet mask",
+  "img": "img/p38.jpg"
  },
  {
-  "Product": "Pumpkin Scrubee Body Scrub",
-  "Brand": "LUSH",
-  "Category": "Body",
-  "Link": "https://www.lush.com/ca/en_ca/p/pumpkin-scrubee-body-scrub",
-  "Price": "CA$12.00 (70 g)",
-  "Why it's trending": "Went viral on TikTok (1.4M views) after a 'what are you wearing?' moment. A seasonal Halloween scrub, made in Canada.",
-  "Source": "https://7news.com.au/7you/beauty/lushs-16-pumpkin-scrubee-is-going-viral-after-one-shopper-discovered-the-body-scrub-behind-a-strangers-amazing-scent--c-22974788",
+  "Product": "Concentrated Ginseng Rejuvenating Eye Cream",
+  "Brand": "Sulwhasoo",
+  "Category": "Skincare",
+  "Link": "https://www.sephora.com/ca/en/product/concentrated-ginseng-rejuventating-eye-cream-for-anti-aging-P516423",
+  "Price": "CA$162.00 (15 mL, Sephora Canada)",
+  "Why it's trending": "Luxury ginseng and retinol eye cream for fine lines and dark circles.",
+  "Source": "https://www.sephora.com/ca/en/product/concentrated-ginseng-rejuventating-eye-cream-for-anti-aging-P516423",
   "Status": "Trending",
-  "img": "img/p24.jpg"
+  "Routine step": "8 Eye cream",
+  "img": ""
+ },
+ {
+  "Product": "Revive Eye Serum: Ginseng + Retinal",
+  "Brand": "Beauty of Joseon",
+  "Category": "Skincare",
+  "Link": "https://ca.beautyofjoseon.com/products/revive-eye-serum-ginseng-retinal",
+  "Price": "CA$17.82 (30 mL, BoJ Canada official)",
+  "Why it's trending": "Cult-favourite retinal eye serum from BoJ's ginseng line.",
+  "Source": "https://ca.beautyofjoseon.com/products/revive-eye-serum-ginseng-retinal",
+  "Status": "Trending",
+  "Routine step": "8 Eye cream",
+  "img": "img/p40.jpg"
+ },
+ {
+  "Product": "PDRN Hyaluronic Acid 100 Moisturizing Cream",
+  "Brand": "Anua",
+  "Category": "Skincare",
+  "Link": "https://www.sephora.com/ca/en/product/pdrn-hyaluronic-acid-100-moisture-cream-60ml-P521440",
+  "Price": "CA$34.00 (60 mL, Sephora Canada)",
+  "Why it's trending": "Kendall Jenner is a fan, more than 100k sold on Amazon last month, and it was a big October Prime Day deal.",
+  "Source": "https://pagesix.com/2026/10/06/style/kendall-jenner-anua-pdrn-cream-is-38-off-at-october-prime-day/",
+  "Status": "Trending",
+  "Routine step": "9 Moisturizer",
+  "img": "img/p03.jpg"
+ },
+ {
+  "Product": "ATOBARRIER365 Cream",
+  "Brand": "Aestura",
+  "Category": "Skincare",
+  "Link": "https://www.sephora.com/ca/en/product/atobarrier365-cream-with-ceramides-niacinamide-for-skin-moisture-barrier-repair-P515494",
+  "Price": "CA$44.00 (Sephora Canada)",
+  "Why it's trending": "One of Sephora's fastest-growing skincare brands, leading K-beauty's push into the dermatologist category.",
+  "Source": "https://www.personalcareinsights.com/news/k-beauty-sephora-us-market.html",
+  "Status": "Trending",
+  "Routine step": "9 Moisturizer",
+  "img": "img/p15.jpg"
+ },
+ {
+  "Product": "Concentrated Ginseng Rejuvenating Cream",
+  "Brand": "Sulwhasoo",
+  "Category": "Skincare",
+  "Link": "https://www.sephora.com/ca/en/product/concentrated-ginseng-rejuventating-cream-for-anti-aging-P516421",
+  "Price": "CA$350.00 (50 mL; CA$74 mini, Sephora Canada)",
+  "Why it's trending": "Sulwhasoo's flagship luxury cream for plumper skin and fewer visible wrinkles.",
+  "Source": "https://www.sephora.com/ca/en/product/concentrated-ginseng-rejuventating-cream-for-anti-aging-P516421",
+  "Status": "Trending",
+  "Routine step": "9 Moisturizer",
+  "img": ""
+ },
+ {
+  "Product": "Every Sun Day Sun Fluid SPF 50+",
+  "Brand": "Dr. Jart+",
+  "Category": "Skincare",
+  "Link": "https://www.sephora.com/ca/en/product/dr-jart-every-sun-day-tm-sun-fluid-sunscreen-spf-50-for-face-P512202",
+  "Price": "CA$61.00 (Sephora Canada)",
+  "Why it's trending": "Weightless Korean sun fluid with a radiant finish and no white cast. Only at Sephora.",
+  "Source": "https://www.sephora.com/ca/en/product/dr-jart-every-sun-day-tm-sun-fluid-sunscreen-spf-50-for-face-P512202",
+  "Status": "Trending",
+  "Routine step": "10 SPF",
+  "img": ""
+ },
+ {
+  "Product": "Relief Sun: Rice + Niacinamide SPF 50+ PA++++",
+  "Brand": "Beauty of Joseon",
+  "Category": "Skincare",
+  "Link": "https://ca.beautyofjoseon.com/products/relief-sun-rice-probiotics",
+  "Price": "CA$18.27 (1 pack, BoJ Canada official)",
+  "Why it's trending": "The cult Korean sunscreen behind Beauty of Joseon's global fame, sold officially in Canada.",
+  "Source": "https://ca.beautyofjoseon.com/products/relief-sun-rice-probiotics",
+  "Status": "Trending",
+  "Routine step": "10 SPF",
+  "img": "img/p43.jpg"
  }
 ];
-const CATS = ["All","Skincare","Makeup","Haircare","Body","Fragrance"];
+const STEPS = [
+ ["1 Oil cleanser","Oil cleanser","Melts sunscreen, makeup and sebum on dry skin. The first half of the double cleanse."],
+ ["2 Water cleanser","Water cleanser","A gentle low-pH wash that lifts what the oil left behind without stripping."],
+ ["3 Exfoliator","Exfoliator","Two or three times a week, gentle acids or pads clear dead skin so everything after sinks in."],
+ ["4 Toner","Toner","Rebalances and adds the first layer of hydration. Pat it in, don't rub."],
+ ["5 Essence","Essence","The heart of the Korean routine: a light, treatment-rich layer that preps skin to drink up the rest."],
+ ["6 Serum/Ampoule","Serum / Ampoule","Concentrated actives aimed at your main concern: glow, firmness, or overnight renewal."],
+ ["7 Sheet mask","Sheet mask","A weekly boost. Leave it on, then pat the leftover essence in."],
+ ["8 Eye cream","Eye cream","A rice-grain amount, tapped around the orbital bone with your ring finger."],
+ ["9 Moisturizer","Moisturizer","Seals in every layer and supports the barrier."],
+ ["10 SPF","SPF","Every morning, last step, no exceptions. This is the real anti-aging step."]
+];
 const GRADS = [["#ffd6e0","#e8beff"],["#ffe1c6","#ffb8c6"],["#d6ecff","#e3d6ff"],["#d9f5e6","#c9e7ff"],["#fff0c2","#ffc9d9"],["#e6dcff","#ffd1ec"]];
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 let cat = "All", q = "";
+const num = s => s.split(" ")[0];
 
 function splitPrice(p){
   // Split a single trailing parenthetical into a subtle note; keep complex strings whole.
@@ -414,10 +458,10 @@ function card(p, i){
     ? `<img src="${esc(p.img)}" alt="${esc(p.Brand + " " + p.Product)}" loading="${i<4?"eager":"lazy"}" decoding="async" data-i="${i}">`
     : placeholder(p, i);
   return `<li class="card" style="animation-delay:${Math.min(i,8)*30}ms">
-    <div class="media">${img}<span class="tag">${esc(p.Category)}</span></div>
+    <div class="media">${img}<span class="tag">Step ${esc(num(p["Routine step"]))}</span>${p.Status==="Masterflame pick"?`<span class="pick">Masterflame pick</span>`:""}</div>
     <div class="body">
       <p class="brand">${esc(p.Brand)}</p>
-      <h2 class="name">${esc(p.Product)}</h2>
+      <h3 class="name">${esc(p.Product)}</h3>
       <p class="why" title="Tap to expand">${esc(p["Why it's trending"])}</p>
       <div class="foot">
         <div class="price">${esc(main)}${note?`<span class="note">${esc(note)}</span>`:""}</div>
@@ -430,25 +474,37 @@ function card(p, i){
 
 function render(){
   const t = q.trim().toLowerCase();
-  const list = PRODUCTS.filter(p => (cat==="All" || p.Category===cat) &&
-    (!t || [p.Product,p.Brand,p.Category,p["Why it's trending"]].join(" ").toLowerCase().includes(t)));
-  $("#grid").innerHTML = list.map((p) => card(p, PRODUCTS.indexOf(p))).join("");
-  $("#meta").textContent = `${list.length} ${list.length===1?"product":"products"}${cat!=="All"?" in "+cat:""}`;
+  const list = PRODUCTS.filter(p => (cat==="All" || p["Routine step"]===cat) &&
+    (!t || [p.Product,p.Brand,p["Routine step"],p["Why it's trending"]].join(" ").toLowerCase().includes(t)));
+  let html = "";
+  for (const [key, label, ex] of STEPS){
+    const items = list.filter(p => p["Routine step"]===key);
+    if (!items.length) continue;
+    html += `<section class="step" id="s${num(key)}" aria-labelledby="h${num(key)}">
+      <div class="step-head"><span class="step-no">${num(key)}</span><h2 class="t" id="h${num(key)}">${esc(label)}</h2></div>
+      <p class="ex">${esc(ex)}</p>
+      <ul class="grid">${items.map(p => card(p, PRODUCTS.indexOf(p))).join("")}</ul>
+    </section>`;
+  }
+  $("#grid").innerHTML = html;
+  const st = STEPS.find(s=>s[0]===cat);
+  $("#meta").textContent = `${list.length} ${list.length===1?"product":"products"}${st?" · Step "+num(st[0])+" "+st[1]:" across 10 steps"}`;
   $("#empty").style.display = list.length ? "none" : "block";
   document.querySelectorAll("#grid img").forEach(im => im.addEventListener("error", () => {
     const i = +im.dataset.i; im.parentNode.insertAdjacentHTML("afterbegin", placeholder(PRODUCTS[i], i)); im.remove();
   }, {once:true}));
 }
 function renderPills(){
-  $("#pills").innerHTML = CATS.map(c => {
-    const n = c==="All" ? PRODUCTS.length : PRODUCTS.filter(p=>p.Category===c).length;
-    return `<button class="pill" aria-pressed="${c===cat}" data-c="${c}">${c}<span class="n">${n}</span></button>`;
+  const opts = [["All","All"], ...STEPS.map(s => [s[0], num(s[0])+" · "+s[1]])];
+  $("#pills").innerHTML = opts.map(([k,l]) => {
+    const n = k==="All" ? PRODUCTS.length : PRODUCTS.filter(p=>p["Routine step"]===k).length;
+    return `<button class="pill" aria-pressed="${k===cat}" data-c="${esc(k)}">${esc(l)}<span class="n">${n}</span></button>`;
   }).join("");
 }
 $("#pills").addEventListener("click", e => {
   const b = e.target.closest(".pill"); if(!b) return;
   cat = b.dataset.c; renderPills(); render();
-  b.scrollIntoView && document.querySelector(`.pill[data-c="${cat}"]`).scrollIntoView({behavior:"smooth",inline:"center",block:"nearest"});
+  b.scrollIntoView && b.scrollIntoView({behavior:"smooth",inline:"center",block:"nearest"});
 });
 $("#q").addEventListener("input", e => { q = e.target.value; $("#clear").classList.toggle("show", !!q); render(); });
 $("#clear").addEventListener("click", () => { q=""; $("#q").value=""; $("#clear").classList.remove("show"); render(); $("#q").focus(); });

@@ -3,59 +3,64 @@
   "Price": "Not listed (official product page; no Canadian retailer found)",
   "Why it's trending": "'refa hair dryer' was the #1 beauty search on TikTok in the week to Oct 5 (530k searches, up 11%).",
   "Source": "https://tokconnect.com/trends/products/beauty/",
-  "Status": "Trending",
+  "Status": "Pass",
   "Category": "Haircare",
   "Brand": "ReFa",
   "Link": "https://www.refa.net/en/item/refa_beautech_dryer_smart_w/",
   "Product": "BEAUTECH DRYER SMART W (multi-voltage)",
-  "id": "p01"
+  "id": "p01",
+  "Routine step": ""
  },
  {
   "Price": "US$19.99",
   "Why it's trending": "A rosemary-mint growth oil that built a 9-figure business on TikTok Shop and stays a top seller.",
   "Source": "https://www.beautyindependent.com/how-bask-and-lather-tiktok-shop-nine-figure-business/",
-  "Status": "Trending",
+  "Status": "Pass",
   "Category": "Haircare",
   "Brand": "Bask & Lather",
   "Link": "https://baskandlatherco.com/products/scalp-stimulator",
   "Product": "Scalp Stimulator Hair Growth Oil",
-  "id": "p02"
+  "id": "p02",
+  "Routine step": ""
  },
  {
-  "Price": "US$31.00",
+  "Price": "CA$34.00 (60 mL, Sephora Canada)",
   "Why it's trending": "Kendall Jenner is a fan, more than 100k sold on Amazon last month, and it was a big October Prime Day deal.",
   "Source": "https://pagesix.com/2026/10/06/style/kendall-jenner-anua-pdrn-cream-is-38-off-at-october-prime-day/",
   "Status": "Trending",
   "Category": "Skincare",
   "Brand": "Anua",
-  "Link": "https://anua.com/products/pdrn-hyaluronic-acid-100-moisturizing-cream",
+  "Link": "https://www.sephora.com/ca/en/product/pdrn-hyaluronic-acid-100-moisture-cream-60ml-P521440",
   "Product": "PDRN Hyaluronic Acid 100 Moisturizing Cream",
-  "id": "p03"
+  "id": "p03",
+  "Routine step": "9 Moisturizer"
  },
  {
   "Price": "CA$44.00 (Sephora Canada)",
   "Why it's trending": "TikTok hype for glass-skin makeup. A PDRN, niacinamide and HA 'grippy' primer that Marie Claire reviewed on Oct 2.",
   "Source": "https://www.marieclaire.com/beauty/makeup/iconic-london-underglow-pdrn-grippy-primer-review/",
-  "Status": "Trending",
+  "Status": "Pass",
   "Category": "Makeup",
   "Brand": "ICONIC London",
   "Link": "https://www.sephora.com/ca/en/product/underglaze-long-wear-pdrn-grippy-primer-with-hyaluronic-acid-P525208",
   "Product": "Underglaze Long-Wear PDRN Grippy Primer",
-  "id": "p04"
+  "id": "p04",
+  "Routine step": ""
  },
  {
   "Price": "Not shown (8 oz / 3 oz; may be sold out)",
   "Why it's trending": "A new matcha-vanilla gourmand mist that Marie Claire tips to go TikTok-viral. People now shop fragrance by note, like 'matcha'.",
   "Source": "https://www.marieclaire.com/beauty/fragrance/phlur-matcha-milk-berry-cream-body-mist-review/",
-  "Status": "Trending",
+  "Status": "Pass",
   "Category": "Fragrance",
   "Brand": "PHLUR",
   "Link": "https://phlur.com/en-ca/products/matcha-milk-body-mist",
   "Product": "Matcha Milk Body Mist",
-  "id": "p05"
+  "id": "p05",
+  "Routine step": ""
  },
  {
-  "Price": "CA$29 (unverified, Sephora CA search listing)",
+  "Price": "CA$29.00 (Sephora Canada)",
   "Why it's trending": "A long-running TikTok viral hydrating essence, and a top beauty deal this October Prime Day.",
   "Source": "https://www.goodhousekeeping.com/what-to-buy/a74065388/cosrx-snail-mucin-review-prime-day/",
   "Status": "Trending",
@@ -63,98 +68,107 @@
   "Brand": "COSRX",
   "Link": "https://www.sephora.com/ca/en/product/advance-snail-96-mucin-power-essence-P519125",
   "Product": "Advanced Snail 96 Mucin Power Essence",
-  "id": "p06"
+  "id": "p06",
+  "Routine step": "5 Essence"
  },
  {
   "Price": "US$20.00 (reg. US$25.00)",
   "Why it's trending": "A relentlessly hyped TikTok cushion foundation, now in 40 shades after its viral shade-range push.",
   "Source": "https://www.livethatglow.com/tirtir-mask-fit-red-cushion-review/",
-  "Status": "Trending",
+  "Status": "Pass",
   "Category": "Makeup",
   "Brand": "TIRTIR",
   "Link": "https://tirtir.global/products/mask-fit-red-cushion",
   "Product": "Mask Fit Red Cushion",
-  "id": "p07"
+  "id": "p07",
+  "Routine step": ""
  },
  {
   "Price": "CA$61.00",
   "Why it's trending": "'ysl blush 44' had about 296k TikTok searches in the week to Oct 5, up 35%.",
   "Source": "https://tokconnect.com/trends/products/beauty/",
-  "Status": "Trending",
+  "Status": "Pass",
   "Category": "Makeup",
   "Brand": "YSL Beauty",
   "Link": "https://www.yslbeauty.ca/en_CA/makeup/face-makeup/blush/make-me-blush-cream/WW-51628YSL.html?dwvar_WW-51628YSL_color=44_nude_lavalliere_02",
   "Product": "Make Me Blush Cream, #44 Nude Lavallière",
-  "id": "p08"
+  "id": "p08",
+  "Routine step": ""
  },
  {
   "Price": "US$16 (unverified, from search listing)",
   "Why it's trending": "Who What Wear's #1 new launch this month: a limited-edition shimmer mini blush made with Alexandra Leclerc. Monet and Gemini are sold out.",
   "Source": "https://www.whowhatwear.com/uk/best-new-beauty-products",
-  "Status": "Trending",
+  "Status": "Pass",
   "Category": "Makeup",
   "Brand": "rhode",
   "Link": "https://www.rhodeskin.com/products/pocket-pearl-monaco",
   "Product": "Pocket Pearl (Monaco)",
-  "id": "p09"
+  "id": "p09",
+  "Routine step": ""
  },
  {
   "Price": "CA$53 for 240 mL (unverified, Sephora CA search listing)",
   "Why it's trending": "The pistachio-caramel TikTok mist that keeps going viral. Pistachio is fall 2026's loudest fragrance note.",
   "Source": "https://gulfnews.com/best-buys/sol-de-janeiro-cheirosa-62-review-the-viral-body-mist-that-still-earns-compliments-1.500629169",
-  "Status": "Trending",
+  "Status": "Pass",
   "Category": "Fragrance",
   "Brand": "Sol de Janeiro",
   "Link": "https://www.sephora.com/ca/en/product/brazilian-crush-body-fragrance-mist-P417312",
   "Product": "Cheirosa '62 Bum Bum Hair & Body Perfume Mist",
-  "id": "p10"
+  "id": "p10",
+  "Routine step": ""
  },
  {
   "Price": "US$30.00 (reg. US$35.00)",
   "Why it's trending": "New entry in the US TikTok Shop top 10 for the week ending Oct 4. Up 161% month on month as a 'forehead line' firming toner.",
   "Source": "https://www.z.media/insights/tiktok-shop-us-trending-week-ending-2026-10-04",
-  "Status": "Trending",
+  "Status": "Pass",
   "Category": "Skincare",
   "Brand": "Sungboon Editor",
   "Link": "https://sungbooneditor.com/products/silk-peptide-egf-intensive-smoothing-toner",
   "Product": "Silk Peptide EGF Intensive Smoothing Toner (\"EGF Tox Toner\")",
-  "id": "p11"
+  "id": "p11",
+  "Routine step": "4 Toner"
  },
  {
   "Price": "~US$14 (unverified, per review)",
   "Why it's trending": "A viral peel-off liner, boosted by Billie Eilish's GRWM. It started the peel-off lip category.",
   "Source": "https://trendhunter.blog/sacheu-lip-liner-stay-n-peel-review/",
-  "Status": "Trending",
+  "Status": "Pass",
   "Category": "Makeup",
   "Brand": "Sacheu",
   "Link": "https://sacheu.com/products/lip-liner-stay-n-peel-off-lip-liner-tattoo",
   "Product": "Lip Liner STAY-N Peel-Off Lip Stain",
-  "id": "p12"
+  "id": "p12",
+  "Routine step": ""
  },
  {
   "Price": "~CA$22–23 (unverified)",
   "Why it's trending": "Owns the viral peel-off 'blading' lip stain format. Transfer-proof all-day colour.",
   "Source": "https://eaudera.com/i-tested-it-wonderskin-lip-stain-reviews/",
-  "Status": "Trending",
+  "Status": "Pass",
   "Category": "Makeup",
   "Brand": "Wonderskin",
   "Link": "https://www.sephora.com/ca/en/product/wonderskin-wonder-blading-all-day-lip-stain-P519525",
   "Product": "Wonder Blading All-Day Lip Stain",
-  "id": "p13"
+  "id": "p13",
+  "Routine step": ""
  },
  {
   "Price": "£15.95 (unverified; UK site, Canada shipping not confirmed)",
   "Why it's trending": "The biggest TikTok hair-oil brand of 2026, driven by viral before-and-after growth videos.",
   "Source": "https://www.marieclaire.co.uk/beauty/hair/hair-syrup-review",
-  "Status": "Trending",
+  "Status": "Pass",
   "Category": "Haircare",
   "Brand": "Hair Syrup",
   "Link": "https://hairsyrup.co.uk/products/hair-syrup-rapunzel",
   "Product": "Rapunzel Pre-Wash Hair Growth Oil",
-  "id": "p14"
+  "id": "p14",
+  "Routine step": ""
  },
  {
-  "Price": "Not verified (Sephora CA page blocked checks)",
+  "Price": "CA$44.00 (Sephora Canada)",
   "Why it's trending": "One of Sephora's fastest-growing skincare brands, leading K-beauty's push into the dermatologist category.",
   "Source": "https://www.personalcareinsights.com/news/k-beauty-sephora-us-market.html",
   "Status": "Trending",
@@ -162,10 +176,11 @@
   "Brand": "Aestura",
   "Link": "https://www.sephora.com/ca/en/product/atobarrier365-cream-with-ceramides-niacinamide-for-skin-moisture-barrier-repair-P515494",
   "Product": "ATOBARRIER365 Cream",
-  "id": "p15"
+  "id": "p15",
+  "Routine step": "9 Moisturizer"
  },
  {
-  "Price": "Not shown on page (US official site)",
+  "Price": "CA$35.00 (medicube official, CAD checkout, ships to Canada)",
   "Why it's trending": "One of the most-posted K-beauty serums on TikTok this month. Salmon-DNA PDRN plus niacinamide makes it a glass-skin routine staple.",
   "Source": "https://www.kbeautycodes.com/medicube-pdrn-pink-peptide-serum-tiktok-trend",
   "Status": "Trending",
@@ -173,54 +188,59 @@
   "Brand": "medicube",
   "Link": "https://medicube.us/products/rose-pdrn-pink-peptide-serum",
   "Product": "PDRN Pink Peptide Serum",
-  "id": "p16"
+  "id": "p16",
+  "Routine step": "6 Serum/Ampoule"
  },
  {
   "Price": "US$22 (unverified, from search listing)",
   "Why it's trending": "The Smooth & Clear Body Care Set it belongs to was the #1 beauty product on US TikTok Shop in September ($4.9M, up 168%).",
   "Source": "https://rapidtok.com/blog/10-best-selling-beauty-products-tiktok-shop-usa-september-2026",
-  "Status": "Trending",
+  "Status": "Pass",
   "Category": "Body",
   "Brand": "medicube",
   "Link": "https://medicube.us/products/kojic-acid-turmeric-brightening-body-wash",
   "Product": "Kojic Acid Turmeric Brightening Body Wash (from the Smooth & Clear Body Care Set)",
-  "id": "p17"
+  "id": "p17",
+  "Routine step": ""
  },
  {
   "Price": "CA$46 (unverified, Sephora CA search listing)",
   "Why it's trending": "One of Sephora's handful of breakout hero SKUs. Dae is gaining haircare share.",
   "Source": "https://www.gcimagazine.com/brands-products/bath-body/article/22959600/the-new-rules-of-winning-at-sephoracategory-by-category",
-  "Status": "Trending",
+  "Status": "Pass",
   "Category": "Haircare",
   "Brand": "dae",
   "Link": "https://www.sephora.com/ca/en/product/dae-cactus-flower-3-in-1-styling-cream-P482668",
   "Product": "Cactus Fruit 3-in-1 Styling Cream",
-  "id": "p18"
+  "id": "p18",
+  "Routine step": ""
  },
  {
   "Price": "CA$32.50 (unverified, Sephora Canada listing on Instacart)",
   "Why it's trending": "The top-performing SKU across Sephora makeup and skincare (Navigo analysis). Lip and skin hybrid products are outselling classic makeup.",
   "Source": "https://www.gcimagazine.com/brands-products/bath-body/article/22959600/the-new-rules-of-winning-at-sephoracategory-by-category",
-  "Status": "Trending",
+  "Status": "Pass",
   "Category": "Makeup",
   "Brand": "Summer Fridays",
   "Link": "https://www.sephora.com/ca/en/product/summer-fridays-lip-butter-balm-P455936",
   "Product": "Lip Butter Balm",
-  "id": "p19"
+  "id": "p19",
+  "Routine step": ""
  },
  {
   "Price": "CA$65 (unverified, Sephora CA search listing)",
   "Why it's trending": "Trending glossy hair oil on TikTok. Kérastase posted one of the strongest share gains at Sephora.",
   "Source": "https://www.gcimagazine.com/brands-products/bath-body/article/22959600/the-new-rules-of-winning-at-sephoracategory-by-category",
-  "Status": "Trending",
+  "Status": "Pass",
   "Category": "Haircare",
   "Brand": "Kérastase",
   "Link": "https://www.sephora.com/ca/en/product/gloss-absolu-glaze-drops-high-shine-hair-oil-P515649",
   "Product": "Gloss Absolu Glaze Drops Hair Oil",
-  "id": "p20"
+  "id": "p20",
+  "Routine step": ""
  },
  {
-  "Price": "CA$20.25 (reg. CA$27.00)",
+  "Price": "CA$20.25 (30 mL, reg. CA$27.00)",
   "Why it's trending": "Shows up constantly in TikTok glass-skin and PDRN serum side-by-sides.",
   "Source": "https://www.kbeautycodes.com/medicube-pdrn-pink-peptide-serum-tiktok-trend",
   "Status": "Trending",
@@ -228,39 +248,271 @@
   "Brand": "Beauty of Joseon",
   "Link": "https://ca.beautyofjoseon.com/products/glow-serum-propolis-niacinamide",
   "Product": "Glow Serum: Propolis + Niacinamide",
-  "id": "p21"
+  "id": "p21",
+  "Routine step": "6 Serum/Ampoule"
  },
  {
   "Price": "CA$203 (100 mL) / CA$142 (50 mL) / CA$39 (10 mL travel)",
   "Why it's trending": "A Sephora hero SKU from a brand gaining fragrance share, right on fall's cozy-vanilla gourmand trend.",
   "Source": "https://www.gcimagazine.com/brands-products/bath-body/article/22959600/the-new-rules-of-winning-at-sephoracategory-by-category",
-  "Status": "Trending",
+  "Status": "Pass",
   "Category": "Fragrance",
   "Brand": "KAYALI",
   "Link": "https://kayali.com/en-ca/products/vanilla-28",
   "Product": "Vanilla | 28 Eau de Parfum",
-  "id": "p22"
+  "id": "p22",
+  "Routine step": ""
  },
  {
   "Price": "CA$10",
   "Why it's trending": "'Putty blush' was the #2 beauty search on TikTok in the week to Oct 5 (461k searches).",
   "Source": "https://tokconnect.com/trends/products/beauty/",
-  "Status": "Trending",
+  "Status": "Pass",
   "Category": "Makeup",
   "Brand": "e.l.f.",
   "Link": "https://ca.elfcosmetics.com/products/putty-blush",
   "Product": "Putty Blush",
-  "id": "p23"
+  "id": "p23",
+  "Routine step": ""
  },
  {
   "Price": "CA$12.00 (70 g)",
   "Why it's trending": "Went viral on TikTok (1.4M views) after a 'what are you wearing?' moment. A seasonal Halloween scrub, made in Canada.",
   "Source": "https://7news.com.au/7you/beauty/lushs-16-pumpkin-scrubee-is-going-viral-after-one-shopper-discovered-the-body-scrub-behind-a-strangers-amazing-scent--c-22974788",
-  "Status": "Trending",
+  "Status": "Pass",
   "Category": "Body",
   "Brand": "LUSH",
   "Link": "https://www.lush.com/ca/en_ca/p/pumpkin-scrubee-body-scrub",
   "Product": "Pumpkin Scrubee Body Scrub",
-  "id": "p24"
+  "id": "p24",
+  "Routine step": ""
+ },
+ {
+  "Price": "CA$54.00 (200 mL, Sephora Canada)",
+  "Why it's trending": "Sulwhasoo's cult first cleanse. Allure 2024 Best of Beauty winner, melts waterproof makeup and SPF without stripping.",
+  "Source": "https://www.sephora.com/ca/en/product/gentle-cleansing-oil-P450633",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "Sulwhasoo",
+  "Link": "https://www.sephora.com/ca/en/product/gentle-cleansing-oil-P450633",
+  "Product": "Gentle Cleansing Oil",
+  "id": "p25",
+  "Routine step": "1 Oil cleanser"
+ },
+ {
+  "Price": "CA$28.00 (200 mL, Sephora Canada)",
+  "Why it's trending": "The viral K-beauty double-cleanse oil. Heartleaf calms while it lifts sebum and sunscreen.",
+  "Source": "https://www.sephora.com/ca/en/product/heartleaf-pore-control-cleansing-oil-200ml-P521433",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "Anua",
+  "Link": "https://www.sephora.com/ca/en/product/heartleaf-pore-control-cleansing-oil-200ml-P521433",
+  "Product": "Heartleaf Pore Control Cleansing Oil",
+  "id": "p26",
+  "Routine step": "1 Oil cleanser"
+ },
+ {
+  "Price": "CA$22.40 (210 mL, BoJ Canada official)",
+  "Why it's trending": "Hanbang-style ginseng and soybean oil cleanser from one of K-beauty's most hyped brands.",
+  "Source": "https://ca.beautyofjoseon.com/products/ginseng-cleansing-oil",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "Beauty of Joseon",
+  "Link": "https://ca.beautyofjoseon.com/products/ginseng-cleansing-oil",
+  "Product": "Ginseng Cleansing Oil",
+  "id": "p27",
+  "Routine step": "1 Oil cleanser"
+ },
+ {
+  "Price": "CA$17–88 by size; 200 mL listed at CA$38 (search listing, confirm on page)",
+  "Why it's trending": "The luxury second cleanse: gel-to-foam with Korean herbs, 1K+ reviews at Sephora.",
+  "Source": "https://www.sephora.com/ca/en/brand/sulwhasoo",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "Sulwhasoo",
+  "Link": "https://www.sephora.com/ca/en/product/gentle-cleansing-foam-P507894",
+  "Product": "Gentle Cleansing Foam",
+  "id": "p28",
+  "Routine step": "2 Water cleanser"
+ },
+ {
+  "Price": "CA$15.75 (100 mL, BoJ Canada official)",
+  "Why it's trending": "Low-pH gel cleanser loved for clean-but-not-tight skin.",
+  "Source": "https://ca.beautyofjoseon.com/products/green-plum-refreshing-cleanser",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "Beauty of Joseon",
+  "Link": "https://ca.beautyofjoseon.com/products/green-plum-refreshing-cleanser",
+  "Product": "Green Plum Refreshing Cleanser",
+  "id": "p29",
+  "Routine step": "2 Water cleanser"
+ },
+ {
+  "Price": "CA$35.00 (single pack, medicube official, CAD checkout, ships to Canada)",
+  "Why it's trending": "medicube's best-selling AHA/BHA toner pads for pores and texture.",
+  "Source": "https://medicube.us/products/zero-pore-pad-1",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "medicube",
+  "Link": "https://medicube.us/products/zero-pore-pad-1",
+  "Product": "Zero Pore Pads",
+  "id": "p30",
+  "Routine step": "3 Exfoliator"
+ },
+ {
+  "Price": "US$23.00 (Anua official, ships to Canada, USD)",
+  "Why it's trending": "Gentle PHA/BHA exfoliating pads from the Heartleaf 77 line.",
+  "Source": "https://anua.com/products/heartleaf-77-toner-pad-160ml",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "Anua",
+  "Link": "https://anua.com/products/heartleaf-77-toner-pad-160ml",
+  "Product": "Heartleaf 77 Clear Pad",
+  "id": "p31",
+  "Routine step": "3 Exfoliator"
+ },
+ {
+  "Price": "CA$22–65 by size (Sephora Canada)",
+  "Why it's trending": "Allure 2023 Best of Beauty milky toner with ceramides and peptides. One of LANEIGE's best sellers.",
+  "Source": "https://www.sephora.com/ca/en/brand/laneige",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "LANEIGE",
+  "Link": "https://www.sephora.com/ca/en/product/cream-skin-refillable-toner-moisturizer-with-ceramides-peptides-P505897",
+  "Product": "Cream Skin Milky Toner",
+  "id": "p32",
+  "Routine step": "4 Toner"
+ },
+ {
+  "Price": "US$23.00 (250 mL, Anua official, ships to Canada, USD)",
+  "Why it's trending": "The toner that made Anua famous on TikTok. 77% heartleaf to calm redness.",
+  "Source": "https://anua.com/products/heartleaf-77-soothing-toner",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "Anua",
+  "Link": "https://anua.com/products/heartleaf-77-soothing-toner",
+  "Product": "Heartleaf 77 Soothing Toner",
+  "id": "p33",
+  "Routine step": "4 Toner"
+ },
+ {
+  "Price": "CA$34–120 by size; 60 mL CA$120 (Sephora Canada)",
+  "Why it's trending": "Korea's iconic luxury first step after cleansing. 89K+ loves at Sephora, with ginseng to prep skin for everything after.",
+  "Source": "https://www.sephora.com/ca/en/brand/sulwhasoo",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "Sulwhasoo",
+  "Link": "https://www.sephora.com/ca/en/product/sulwhasoo-first-care-activating-serum-ad-P469538",
+  "Product": "First Care Activating Serum",
+  "id": "p34",
+  "Routine step": "5 Essence"
+ },
+ {
+  "Price": "CA$19.43 (150 mL, BoJ Canada official)",
+  "Why it's trending": "Watery ginseng essence that layers like a toner and hydrates like an essence.",
+  "Source": "https://ca.beautyofjoseon.com/products/ginseng-essence-water",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "Beauty of Joseon",
+  "Link": "https://ca.beautyofjoseon.com/products/ginseng-essence-water",
+  "Product": "Ginseng Essence Water",
+  "id": "p35",
+  "Routine step": "5 Essence"
+ },
+ {
+  "Price": "CA$49.29 (shipped and sold by Amazon.ca)",
+  "Why it's trending": "Isaiah's favourite night serum. Antioxidants, hyaluronic acid and LHA, with 2,400+ ratings on Amazon.ca.",
+  "Source": "https://www.amazon.ca/dp/B09742Q1PP",
+  "Status": "Masterflame pick",
+  "Category": "Skincare",
+  "Brand": "L'Oréal Paris",
+  "Link": "https://www.amazon.ca/dp/B09742Q1PP?m=A3DWYIK6Y9EEQB",
+  "Product": "Age Perfect Cell Renewal Midnight Serum (30 ml)",
+  "id": "p36",
+  "Routine step": "6 Serum/Ampoule"
+ },
+ {
+  "Price": "CA$26.00 (4 masks, Sephora Canada)",
+  "Why it's trending": "The viral overnight collagen hydrogel mask that turns clear as it absorbs.",
+  "Source": "https://www.sephora.com/ca/en/brand/biodance",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "Biodance",
+  "Link": "https://www.sephora.com/ca/en/product/bio-collagen-real-deep-mask-for-pore-minimizing-firming-care-P518859",
+  "Product": "Bio-Collagen Real Deep Mask",
+  "id": "p37",
+  "Routine step": "7 Sheet mask"
+ },
+ {
+  "Price": "CA$19.00 (6 masks, medicube official, CAD checkout, ships to Canada)",
+  "Why it's trending": "Sheet-mask version of medicube's hyped PDRN peptide serum.",
+  "Source": "https://medicube.us/products/pdrn-pink-peptide-ampoule-mask",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "medicube",
+  "Link": "https://medicube.us/products/pdrn-pink-peptide-ampoule-mask",
+  "Product": "PDRN Pink Peptide Ampoule Mask",
+  "id": "p38",
+  "Routine step": "7 Sheet mask"
+ },
+ {
+  "Price": "CA$162.00 (15 mL, Sephora Canada)",
+  "Why it's trending": "Luxury ginseng and retinol eye cream for fine lines and dark circles.",
+  "Source": "https://www.sephora.com/ca/en/product/concentrated-ginseng-rejuventating-eye-cream-for-anti-aging-P516423",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "Sulwhasoo",
+  "Link": "https://www.sephora.com/ca/en/product/concentrated-ginseng-rejuventating-eye-cream-for-anti-aging-P516423",
+  "Product": "Concentrated Ginseng Rejuvenating Eye Cream",
+  "id": "p39",
+  "Routine step": "8 Eye cream"
+ },
+ {
+  "Price": "CA$17.82 (30 mL, BoJ Canada official)",
+  "Why it's trending": "Cult-favourite retinal eye serum from BoJ's ginseng line.",
+  "Source": "https://ca.beautyofjoseon.com/products/revive-eye-serum-ginseng-retinal",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "Beauty of Joseon",
+  "Link": "https://ca.beautyofjoseon.com/products/revive-eye-serum-ginseng-retinal",
+  "Product": "Revive Eye Serum: Ginseng + Retinal",
+  "id": "p40",
+  "Routine step": "8 Eye cream"
+ },
+ {
+  "Price": "CA$350.00 (50 mL; CA$74 mini, Sephora Canada)",
+  "Why it's trending": "Sulwhasoo's flagship luxury cream for plumper skin and fewer visible wrinkles.",
+  "Source": "https://www.sephora.com/ca/en/product/concentrated-ginseng-rejuventating-cream-for-anti-aging-P516421",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "Sulwhasoo",
+  "Link": "https://www.sephora.com/ca/en/product/concentrated-ginseng-rejuventating-cream-for-anti-aging-P516421",
+  "Product": "Concentrated Ginseng Rejuvenating Cream",
+  "id": "p41",
+  "Routine step": "9 Moisturizer"
+ },
+ {
+  "Price": "CA$61.00 (Sephora Canada)",
+  "Why it's trending": "Weightless Korean sun fluid with a radiant finish and no white cast. Only at Sephora.",
+  "Source": "https://www.sephora.com/ca/en/product/dr-jart-every-sun-day-tm-sun-fluid-sunscreen-spf-50-for-face-P512202",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "Dr. Jart+",
+  "Link": "https://www.sephora.com/ca/en/product/dr-jart-every-sun-day-tm-sun-fluid-sunscreen-spf-50-for-face-P512202",
+  "Product": "Every Sun Day Sun Fluid SPF 50+",
+  "id": "p42",
+  "Routine step": "10 SPF"
+ },
+ {
+  "Price": "CA$18.27 (1 pack, BoJ Canada official)",
+  "Why it's trending": "The cult Korean sunscreen behind Beauty of Joseon's global fame, sold officially in Canada.",
+  "Source": "https://ca.beautyofjoseon.com/products/relief-sun-rice-probiotics",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "Beauty of Joseon",
+  "Link": "https://ca.beautyofjoseon.com/products/relief-sun-rice-probiotics",
+  "Product": "Relief Sun: Rice + Niacinamide SPF 50+ PA++++",
+  "id": "p43",
+  "Routine step": "10 SPF"
  }
 ]

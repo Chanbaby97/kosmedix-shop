@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Kosmedix Shop</title>
-<meta name="description" content="A curated shop of trending beauty and skincare, October 2026.">
+<meta name="description" content="Premium, hyped skincare arranged by the Korean skin-first routine, from authorized sellers that ship to Canada.">
 <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -88,6 +88,14 @@ h1{font-size:40px;line-height:1.05;letter-spacing:-.025em;font-weight:700;margin
 .shop:active{transform:scale(.96);opacity:.85}
 .src{font-size:12px;color:var(--faint);margin-top:12px}
 .src a{color:inherit}
+.step{margin:34px 0 0;scroll-margin-top:120px}
+.step:first-of-type{margin-top:8px}
+.step-head{display:flex;align-items:baseline;gap:12px;margin:0 0 4px}
+.step-no{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--pill-on);color:var(--pill-on-text);font-size:14px;font-weight:600;display:inline-flex;align-items:center;justify-content:center;transform:translateY(-3px)}
+.step h2.t{font-size:28px;line-height:1.1;letter-spacing:-.02em;font-weight:700;margin:0}
+.step .ex{font-size:15px;color:var(--muted);margin:2px 0 16px 42px}
+.step .grid{margin-bottom:0}
+.pick{position:absolute;right:12px;top:12px;font-size:12px;font-weight:600;color:#fff;background:linear-gradient(135deg,#ff6a3d,#e0245e);padding:4px 10px;border-radius:999px;box-shadow:0 1px 3px rgba(0,0,0,.12)}
 .empty{text-align:center;color:var(--muted);padding:60px 0;display:none}
 footer{font-size:12px;color:var(--faint);padding:10px 0 50px;border-top:1px solid var(--line);margin-top:10px}
 footer p{margin:12px 0 0}
@@ -96,9 +104,9 @@ footer p{margin:12px 0 0}
 <body>
 <div class="wrap">
   <header class="hero">
-    <p class="eyebrow">Trending · October 2026</p>
+    <p class="eyebrow">The Korean routine · Skincare only</p>
     <h1>Kosmedix Shop</h1>
-    <p class="sub">The beauty and skincare everyone's talking about right now, hand-picked from TikTok Shop data and the latest beauty coverage.</p>
+    <p class="sub">Premium, genuinely hyped skincare, laid out in Korean skin-first order. Every pick comes from the brand or an authorized retailer that ships to Canada.</p>
   </header>
 </div>
 <div class="bar" id="bar">
@@ -108,25 +116,37 @@ footer p{margin:12px 0 0}
       <input id="q" type="search" placeholder="Search products or brands" autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="search" aria-label="Search">
       <button class="clear" id="clear" aria-label="Clear search">✕</button>
     </div>
-    <nav class="pills" id="pills" aria-label="Categories"></nav>
+    <nav class="pills" id="pills" aria-label="Routine steps"></nav>
   </div>
 </div>
 <main class="wrap">
   <p class="meta" id="meta"></p>
-  <ul class="grid" id="grid"></ul>
+  <div id="grid"></div>
   <p class="empty" id="empty">No matches. Try another search.</p>
   <footer>
-    <p>Prices are shown as listed, in their own currency. Anything marked “unverified” came from a search listing, so double-check it before buying.</p>
-    <p>Curated October 2026.</p>
+    <p>Prices are shown as listed, in CAD where the store offers it (anua.com charges in USD). Anything marked “search listing” or “confirm on page” wasn’t readable on the live page, so double-check it before buying. Layer thinnest to thickest: you don’t need every step every day.</p>
+    <p>Curated October 2026 for Cape Breton, Nova Scotia.</p>
   </footer>
 </main>
 <script>
 const PRODUCTS = __DATA__;
-const CATS = ["All","Skincare","Makeup","Haircare","Body","Fragrance"];
+const STEPS = [
+ ["1 Oil cleanser","Oil cleanser","Melts sunscreen, makeup and sebum on dry skin. The first half of the double cleanse."],
+ ["2 Water cleanser","Water cleanser","A gentle low-pH wash that lifts what the oil left behind without stripping."],
+ ["3 Exfoliator","Exfoliator","Two or three times a week, gentle acids or pads clear dead skin so everything after sinks in."],
+ ["4 Toner","Toner","Rebalances and adds the first layer of hydration. Pat it in, don't rub."],
+ ["5 Essence","Essence","The heart of the Korean routine: a light, treatment-rich layer that preps skin to drink up the rest."],
+ ["6 Serum/Ampoule","Serum / Ampoule","Concentrated actives aimed at your main concern: glow, firmness, or overnight renewal."],
+ ["7 Sheet mask","Sheet mask","A weekly boost. Leave it on, then pat the leftover essence in."],
+ ["8 Eye cream","Eye cream","A rice-grain amount, tapped around the orbital bone with your ring finger."],
+ ["9 Moisturizer","Moisturizer","Seals in every layer and supports the barrier."],
+ ["10 SPF","SPF","Every morning, last step, no exceptions. This is the real anti-aging step."]
+];
 const GRADS = [["#ffd6e0","#e8beff"],["#ffe1c6","#ffb8c6"],["#d6ecff","#e3d6ff"],["#d9f5e6","#c9e7ff"],["#fff0c2","#ffc9d9"],["#e6dcff","#ffd1ec"]];
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 let cat = "All", q = "";
+const num = s => s.split(" ")[0];
 
 function splitPrice(p){
   // Split a single trailing parenthetical into a subtle note; keep complex strings whole.
@@ -149,10 +169,10 @@ function card(p, i){
     ? `<img src="${esc(p.img)}" alt="${esc(p.Brand + " " + p.Product)}" loading="${i<4?"eager":"lazy"}" decoding="async" data-i="${i}">`
     : placeholder(p, i);
   return `<li class="card" style="animation-delay:${Math.min(i,8)*30}ms">
-    <div class="media">${img}<span class="tag">${esc(p.Category)}</span></div>
+    <div class="media">${img}<span class="tag">Step ${esc(num(p["Routine step"]))}</span>${p.Status==="Masterflame pick"?`<span class="pick">Masterflame pick</span>`:""}</div>
     <div class="body">
       <p class="brand">${esc(p.Brand)}</p>
-      <h2 class="name">${esc(p.Product)}</h2>
+      <h3 class="name">${esc(p.Product)}</h3>
       <p class="why" title="Tap to expand">${esc(p["Why it's trending"])}</p>
       <div class="foot">
         <div class="price">${esc(main)}${note?`<span class="note">${esc(note)}</span>`:""}</div>
@@ -165,25 +185,37 @@ function card(p, i){
 
 function render(){
   const t = q.trim().toLowerCase();
-  const list = PRODUCTS.filter(p => (cat==="All" || p.Category===cat) &&
-    (!t || [p.Product,p.Brand,p.Category,p["Why it's trending"]].join(" ").toLowerCase().includes(t)));
-  $("#grid").innerHTML = list.map((p) => card(p, PRODUCTS.indexOf(p))).join("");
-  $("#meta").textContent = `${list.length} ${list.length===1?"product":"products"}${cat!=="All"?" in "+cat:""}`;
+  const list = PRODUCTS.filter(p => (cat==="All" || p["Routine step"]===cat) &&
+    (!t || [p.Product,p.Brand,p["Routine step"],p["Why it's trending"]].join(" ").toLowerCase().includes(t)));
+  let html = "";
+  for (const [key, label, ex] of STEPS){
+    const items = list.filter(p => p["Routine step"]===key);
+    if (!items.length) continue;
+    html += `<section class="step" id="s${num(key)}" aria-labelledby="h${num(key)}">
+      <div class="step-head"><span class="step-no">${num(key)}</span><h2 class="t" id="h${num(key)}">${esc(label)}</h2></div>
+      <p class="ex">${esc(ex)}</p>
+      <ul class="grid">${items.map(p => card(p, PRODUCTS.indexOf(p))).join("")}</ul>
+    </section>`;
+  }
+  $("#grid").innerHTML = html;
+  const st = STEPS.find(s=>s[0]===cat);
+  $("#meta").textContent = `${list.length} ${list.length===1?"product":"products"}${st?" · Step "+num(st[0])+" "+st[1]:" across 10 steps"}`;
   $("#empty").style.display = list.length ? "none" : "block";
   document.querySelectorAll("#grid img").forEach(im => im.addEventListener("error", () => {
     const i = +im.dataset.i; im.parentNode.insertAdjacentHTML("afterbegin", placeholder(PRODUCTS[i], i)); im.remove();
   }, {once:true}));
 }
 function renderPills(){
-  $("#pills").innerHTML = CATS.map(c => {
-    const n = c==="All" ? PRODUCTS.length : PRODUCTS.filter(p=>p.Category===c).length;
-    return `<button class="pill" aria-pressed="${c===cat}" data-c="${c}">${c}<span class="n">${n}</span></button>`;
+  const opts = [["All","All"], ...STEPS.map(s => [s[0], num(s[0])+" · "+s[1]])];
+  $("#pills").innerHTML = opts.map(([k,l]) => {
+    const n = k==="All" ? PRODUCTS.length : PRODUCTS.filter(p=>p["Routine step"]===k).length;
+    return `<button class="pill" aria-pressed="${k===cat}" data-c="${esc(k)}">${esc(l)}<span class="n">${n}</span></button>`;
   }).join("");
 }
 $("#pills").addEventListener("click", e => {
   const b = e.target.closest(".pill"); if(!b) return;
   cat = b.dataset.c; renderPills(); render();
-  b.scrollIntoView && document.querySelector(`.pill[data-c="${cat}"]`).scrollIntoView({behavior:"smooth",inline:"center",block:"nearest"});
+  b.scrollIntoView && b.scrollIntoView({behavior:"smooth",inline:"center",block:"nearest"});
 });
 $("#q").addEventListener("input", e => { q = e.target.value; $("#clear").classList.toggle("show", !!q); render(); });
 $("#clear").addEventListener("click", () => { q=""; $("#q").value=""; $("#clear").classList.remove("show"); render(); $("#q").focus(); });

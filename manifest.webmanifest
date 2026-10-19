@@ -1,7 +1,7 @@
 {
   "name": "Kosmedix Shop",
   "short_name": "Kosmedix",
-  "description": "Trending beauty and skincare, curated October 2026.",
+  "description": "Premium Korean-routine skincare that ships to Canada.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
