@@ -514,5 +514,53 @@
   "Product": "Relief Sun: Rice + Niacinamide SPF 50+ PA++++",
   "id": "p43",
   "Routine step": "10 SPF"
+ },
+ {
+  "Price": "CA$230 (30 mL, SkinCeuticals Canada official)",
+  "Why it's trending": "The first reformulation of the cult vitamin C serum in 20 years (adds carnosine and Endophytol). Allure reviewed it, and the new formula is now sold on SkinCeuticals Canada.",
+  "Source": "https://www.allure.com/story/skinceuticals-c-e-ferulic-serum-reformulation-2026",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "SkinCeuticals",
+  "Link": "https://www.skinceuticals.ca/en_CA/skincare/c-e-ferulic-with-15-l-ascorbic-acid-S17.html",
+  "Product": "C E Ferulic with 15% L-Ascorbic Acid (new 2026 formula)",
+  "Routine step": "6 Serum/Ampoule",
+  "id": "p44"
+ },
+ {
+  "Price": "CA$315 (15 mL; 30 mL CA$615, 50 mL CA$840, 100 mL CA$1,375; La Mer Canada official)",
+  "Why it's trending": "La Mer reformulated its cult barrier serum with Concentrated Miracle Broth and new Clarity Algae for sensitive, stressed skin. Launch coverage around Oct 12, 2026.",
+  "Source": "https://fathommagazine.com/articles/la-mers-new-concentrate-is-giving-sensitive-skin-a-much-needed-reset",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "La Mer",
+  "Link": "https://www.cremedelamer.ca/product/9090/149855/face/serums/the-concentrate-serum",
+  "Product": "The Concentrate Serum (new formula)",
+  "Routine step": "6 Serum/Ampoule",
+  "id": "p45"
+ },
+ {
+  "Price": "CA$32.00 (150 g, Sephora Canada)",
+  "Why it's trending": "Amorepacific's derma brand brings its ceramide-capsule tech to a toner. Trend Hunter spotlighted it at Sephora Canada on Oct 15, 2026 (230 reviews there).",
+  "Source": "https://www.trendhunter.com/trends/atobarrier365-capsule-toner",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "Aestura",
+  "Link": "https://www.sephora.com/ca/en/product/atobarrier-capsule-toner-P526233",
+  "Product": "ATOBARRIER365 Capsule Toner",
+  "Routine step": "4 Toner",
+  "id": "p46"
+ },
+ {
+  "Price": "CA$490 (50 mL, Augustinus Bader Canada official site)",
+  "Why it's trending": "Augustinus Bader's first dedicated night cream (Advanced TFC8, fragrance-free, vegan), launched September 2026 and featured by Vogue France (sponsored feature).",
+  "Source": "https://www.vogue.fr/beaute/promotion/soin-nuit-the-overnight-restorative-cream-augustinus-bader",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "Augustinus Bader",
+  "Link": "https://augustinusbader.com/en-ca/products/the-overnight-restorative-cream",
+  "Product": "The Overnight Restorative Cream",
+  "Routine step": "9 Moisturizer",
+  "id": "p47"
  }
 ]
