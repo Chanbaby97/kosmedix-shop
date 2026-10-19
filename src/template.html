@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kosmedix Shop</title>
+<meta name="description" content="A curated shop of trending beauty and skincare, October 2026.">
+<meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Kosmedix">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+:root{
+  --bg:#f5f5f7; --card:#ffffff; --text:#1d1d1f; --muted:#6e6e73; --faint:#86868b;
+  --line:rgba(0,0,0,.08); --pill:#e8e8ed; --pill-on:#1d1d1f; --pill-on-text:#fff;
+  --accent:#0071e3; --accent-text:#fff; --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.06);
+  --bar:rgba(245,245,247,.78); --imgbg:#ffffff;
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#000; --card:#1c1c1e; --text:#f5f5f7; --muted:#a1a1a6; --faint:#8e8e93;
+    --line:rgba(255,255,255,.1); --pill:#2c2c2e; --pill-on:#f5f5f7; --pill-on-text:#000;
+    --accent:#2997ff; --accent-text:#fff; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+    --bar:rgba(0,0,0,.72); --imgbg:#ffffff;
+  }
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display","Helvetica Neue",Inter,"Segoe UI",Roboto,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;line-height:1.4;
+  padding-bottom:env(safe-area-inset-bottom)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header.hero{padding:calc(env(safe-area-inset-top) + 44px) 0 18px}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--faint);text-transform:uppercase;margin:0 0 6px}
+h1{font-size:40px;line-height:1.05;letter-spacing:-.025em;font-weight:700;margin:0}
+.sub{font-size:17px;color:var(--muted);margin:10px 0 0;max-width:34em}
+.bar{position:sticky;top:0;z-index:10;background:var(--bar);
+  -webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);
+  border-bottom:1px solid transparent;transition:border-color .2s;padding-top:env(safe-area-inset-top)}
+.bar.stuck{border-bottom-color:var(--line)}
+.search{position:relative;padding:10px 0 4px}
+.search svg{position:absolute;left:12px;top:50%;margin-top:-1px;transform:translateY(-50%);width:16px;height:16px;color:var(--faint);pointer-events:none}
+.search input{width:100%;font:inherit;font-size:17px;color:var(--text);background:var(--pill);border:0;border-radius:12px;
+  padding:10px 36px 10px 36px;outline:none;-webkit-appearance:none;appearance:none}
+.search input::placeholder{color:var(--faint)}
+.search input:focus{box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 35%,transparent)}
+.clear{position:absolute;right:8px;top:50%;margin-top:3px;transform:translateY(-50%);border:0;background:var(--faint);color:var(--bg);
+  width:20px;height:20px;border-radius:50%;font-size:13px;line-height:20px;padding:0;display:none;cursor:pointer}
+.clear.show{display:block}
+.pills{display:flex;gap:8px;overflow-x:auto;padding:10px 20px 12px;margin:0 -20px;scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity;scroll-padding-inline:20px}
+.pills::-webkit-scrollbar{display:none}
+.pill{flex:0 0 auto;scroll-snap-align:start;border:0;font:inherit;font-size:15px;font-weight:500;color:var(--text);background:var(--pill);
+  padding:8px 16px;border-radius:999px;cursor:pointer;transition:background .2s,color .2s,transform .1s}
+.pill:active{transform:scale(.96)}
+.pill[aria-pressed="true"]{background:var(--pill-on);color:var(--pill-on-text)}
+.pill .n{opacity:.55;font-weight:400;margin-left:4px;font-size:13px}
+.meta{font-size:13px;color:var(--faint);margin:18px 0 10px}
+.grid{display:grid;grid-template-columns:1fr;gap:18px;margin:0 0 40px;padding:0;list-style:none}
+@media (min-width:600px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--card);border-radius:22px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;
+  animation:in .4s ease both}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.media{aspect-ratio:4/3;background:var(--imgbg);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.media img{width:100%;height:100%;object-fit:contain;display:block;padding:14px}
+.ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:64px;font-weight:600;letter-spacing:-.02em;color:rgba(255,255,255,.95)}
+.tag{position:absolute;left:12px;top:12px;font-size:12px;font-weight:600;color:#1d1d1f;background:rgba(255,255,255,.85);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);padding:4px 10px;border-radius:999px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.brand{font-size:13px;font-weight:600;color:var(--faint);text-transform:uppercase;letter-spacing:.04em;margin:0 0 4px}
+.name{font-size:20px;font-weight:600;letter-spacing:-.015em;line-height:1.2;margin:0}
+.why{font-size:15px;color:var(--muted);margin:10px 0 0;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;cursor:pointer}
+.why.open{-webkit-line-clamp:unset;display:block}
+.foot{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-top:auto;padding-top:16px}
+.price{font-size:17px;font-weight:600;letter-spacing:-.01em}
+.note{display:block;font-size:12px;font-weight:400;color:var(--faint);margin-top:2px;letter-spacing:0}
+.shop{flex:0 0 auto;display:inline-flex;align-items:center;gap:4px;text-decoration:none;background:var(--accent);color:var(--accent-text);
+  font-size:15px;font-weight:600;padding:9px 18px;border-radius:999px;transition:transform .1s,opacity .2s}
+.shop:active{transform:scale(.96);opacity:.85}
+.src{font-size:12px;color:var(--faint);margin-top:12px}
+.src a{color:inherit}
+.empty{text-align:center;color:var(--muted);padding:60px 0;display:none}
+footer{font-size:12px;color:var(--faint);padding:10px 0 50px;border-top:1px solid var(--line);margin-top:10px}
+footer p{margin:12px 0 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Trending · October 2026</p>
+    <h1>Kosmedix Shop</h1>
+    <p class="sub">The beauty and skincare everyone's talking about right now, hand-picked from TikTok Shop data and the latest beauty coverage.</p>
+  </header>
+</div>
+<div class="bar" id="bar">
+  <div class="wrap">
+    <div class="search">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="8.5" cy="8.5" r="6"/><path d="M13 13l4.5 4.5"/></svg>
+      <input id="q" type="search" placeholder="Search products or brands" autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="search" aria-label="Search">
+      <button class="clear" id="clear" aria-label="Clear search">✕</button>
+    </div>
+    <nav class="pills" id="pills" aria-label="Categories"></nav>
+  </div>
+</div>
+<main class="wrap">
+  <p class="meta" id="meta"></p>
+  <ul class="grid" id="grid"></ul>
+  <p class="empty" id="empty">No matches. Try another search.</p>
+  <footer>
+    <p>Prices are shown as listed, in their own currency. Anything marked “unverified” came from a search listing, so double-check it before buying.</p>
+    <p>Curated October 2026.</p>
+  </footer>
+</main>
+<script>
+const PRODUCTS = __DATA__;
+const CATS = ["All","Skincare","Makeup","Haircare","Body","Fragrance"];
+const GRADS = [["#ffd6e0","#e8beff"],["#ffe1c6","#ffb8c6"],["#d6ecff","#e3d6ff"],["#d9f5e6","#c9e7ff"],["#fff0c2","#ffc9d9"],["#e6dcff","#ffd1ec"]];
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let cat = "All", q = "";
+
+function splitPrice(p){
+  // Split a single trailing parenthetical into a subtle note; keep complex strings whole.
+  const m = p.match(/^([^()]+?)\s*\(([^()]+)\)$/);
+  return m ? [m[1], m[2]] : [p, ""];
+}
+function initials(b){
+  const w = b.replace(/[^\p{L}\p{N}\s&]/gu,"").split(/\s+/).filter(x=>x && x!=="&");
+  return (w.length>1 ? w[0][0]+w[1][0] : (w[0]||"?").slice(0,2)).toUpperCase();
+}
+function placeholder(p, i){
+  const g = GRADS[i % GRADS.length];
+  return `<div class="ph" style="background:linear-gradient(135deg,${g[0]},${g[1]})">${esc(initials(p.Brand))}</div>`;
+}
+function host(u){ try{ return new URL(u).hostname.replace(/^www\./,""); }catch(e){ return ""; } }
+
+function card(p, i){
+  const [main, note] = splitPrice(p.Price);
+  const img = p.img
+    ? `<img src="${esc(p.img)}" alt="${esc(p.Brand + " " + p.Product)}" loading="${i<4?"eager":"lazy"}" decoding="async" data-i="${i}">`
+    : placeholder(p, i);
+  return `<li class="card" style="animation-delay:${Math.min(i,8)*30}ms">
+    <div class="media">${img}<span class="tag">${esc(p.Category)}</span></div>
+    <div class="body">
+      <p class="brand">${esc(p.Brand)}</p>
+      <h2 class="name">${esc(p.Product)}</h2>
+      <p class="why" title="Tap to expand">${esc(p["Why it's trending"])}</p>
+      <div class="foot">
+        <div class="price">${esc(main)}${note?`<span class="note">${esc(note)}</span>`:""}</div>
+        <a class="shop" href="${esc(p.Link)}" target="_blank" rel="noopener noreferrer">Shop<span aria-hidden="true"> ›</span></a>
+      </div>
+      <p class="src">Why: <a href="${esc(p.Source)}" target="_blank" rel="noopener noreferrer">${esc(host(p.Source))}</a></p>
+    </div>
+  </li>`;
+}
+
+function render(){
+  const t = q.trim().toLowerCase();
+  const list = PRODUCTS.filter(p => (cat==="All" || p.Category===cat) &&
+    (!t || [p.Product,p.Brand,p.Category,p["Why it's trending"]].join(" ").toLowerCase().includes(t)));
+  $("#grid").innerHTML = list.map((p) => card(p, PRODUCTS.indexOf(p))).join("");
+  $("#meta").textContent = `${list.length} ${list.length===1?"product":"products"}${cat!=="All"?" in "+cat:""}`;
+  $("#empty").style.display = list.length ? "none" : "block";
+  document.querySelectorAll("#grid img").forEach(im => im.addEventListener("error", () => {
+    const i = +im.dataset.i; im.parentNode.insertAdjacentHTML("afterbegin", placeholder(PRODUCTS[i], i)); im.remove();
+  }, {once:true}));
+}
+function renderPills(){
+  $("#pills").innerHTML = CATS.map(c => {
+    const n = c==="All" ? PRODUCTS.length : PRODUCTS.filter(p=>p.Category===c).length;
+    return `<button class="pill" aria-pressed="${c===cat}" data-c="${c}">${c}<span class="n">${n}</span></button>`;
+  }).join("");
+}
+$("#pills").addEventListener("click", e => {
+  const b = e.target.closest(".pill"); if(!b) return;
+  cat = b.dataset.c; renderPills(); render();
+  b.scrollIntoView && document.querySelector(`.pill[data-c="${cat}"]`).scrollIntoView({behavior:"smooth",inline:"center",block:"nearest"});
+});
+$("#q").addEventListener("input", e => { q = e.target.value; $("#clear").classList.toggle("show", !!q); render(); });
+$("#clear").addEventListener("click", () => { q=""; $("#q").value=""; $("#clear").classList.remove("show"); render(); $("#q").focus(); });
+$("#grid").addEventListener("click", e => { const w = e.target.closest(".why"); if(w) w.classList.toggle("open"); });
+const bar = $("#bar");
+new IntersectionObserver(([en]) => bar.classList.toggle("stuck", !en.isIntersecting), {threshold:0}).observe(document.querySelector("header.hero"));
+renderPills(); render();
+</script>
+</body>
+</html>
