@@ -178,7 +178,7 @@ function card(p, i){
         <div class="price">${esc(main)}${note?`<span class="note">${esc(note)}</span>`:""}</div>
         <a class="shop" href="${esc(p.Link)}" target="_blank" rel="noopener noreferrer">Shop<span aria-hidden="true"> ›</span></a>
       </div>
-      <p class="src">Why: <a href="${esc(p.Source)}" target="_blank" rel="noopener noreferrer">${esc(host(p.Source))}</a></p>
+      <p class="src">Why: ${host(p.Source)?`<a href="${esc(p.Source)}" target="_blank" rel="noopener noreferrer">${esc(host(p.Source))}</a>`:esc(p.Source||"")}</p>
     </div>
   </li>`;
 }
