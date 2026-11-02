@@ -682,5 +682,41 @@
   "Product": "Organic Flowers Toner Deep Rich",
   "Routine step": "4 Toner",
   "id": "p57"
+ },
+ {
+  "Price": "$135.00 (15 mL, Neuraé Canada official)",
+  "Why it's trending": "Hidden gem: new French 'neuro-cosmetic' eye cream, 94% natural-origin (watercress, caffeine, shea) with a cooling metal tip; a Who What Wear editor's favourite launch of October 2026 and called a 'sellout risk'.",
+  "Source": "https://www.whowhatwear.com/beauty/best-new-beauty-products-october-2026",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "Neuraé",
+  "Link": "https://www.neurae.com/en-CA/the-eye-contour-awakening-and-smoothing_-102070.html",
+  "Product": "harmonie The Eye Contour Awakening & Smoothing (15 mL)",
+  "Routine step": "8 Eye cream",
+  "id": "p58"
+ },
+ {
+  "Price": "CA $395.00 (30 mL, Estée Lauder Canada official)",
+  "Why it's trending": "Estée Lauder's new top-of-range Re-Nutriv 'longevity' oil serum (launch covered Oct 29, 2026): shake-to-milk tri-phase oil with SIRTIVITY-LP tech and black diamond truffle; brand reports +87% hydration after one use. Use after serum, before cream.",
+  "Source": "https://www.luxsure.fr/en/2026/10/29/estee-lauder-re-nutriv-oil-serum-longevity-radiance/",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "Estée Lauder",
+  "Link": "https://www.esteelauder.ca/product/680/145353/product-catalog/re-nutriv/re-nutriv-treatment-lotion/re-nutriv/ultimate-diamond-age-reversal-skin-longevity-face-oil-essence",
+  "Product": "Re-Nutriv Ultimate Diamond Age Reversal Skin Longevity Face Oil Essence (30 mL)",
+  "Routine step": "6 Serum/Ampoule",
+  "id": "p59"
+ },
+ {
+  "Price": "$176.00 (30 mL, Sephora Canada)",
+  "Why it's trending": "Sulwhasoo's new luxury brightening line (Harper's Bazaar, Nov 2, 2026): ginseng + ectoin + niacinamide for dark spots and uneven tone; Sephora lists 93% improvement in dark-spot area after 4 weeks (brand test).",
+  "Source": "https://www.harpersbazaar.in/beauty/story/sulwhasoos-new-collection-makes-a-case-for-radiance-that-lasts-1470428-2026-11-02",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "Sulwhasoo",
+  "Link": "https://www.sephora.com/ca/en/product/lumiwise-brighteing-ampoule-serum-P520777",
+  "Product": "Lumiwise Brightening Ampoule Serum (30 mL)",
+  "Routine step": "6 Serum/Ampoule",
+  "id": "p60"
  }
 ]
