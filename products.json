@@ -718,5 +718,41 @@
   "Product": "Lumiwise Brightening Ampoule Serum (30 mL)",
   "Routine step": "6 Serum/Ampoule",
   "id": "p60"
+ },
+ {
+  "Price": "C $590.00 (50 mL, Dior Canada official)",
+  "Why it's trending": "Dior Prestige's reformulated flagship cream (La Vanguardia, Nov 4, 2026): new patented Rosapeptide-3 from the Granville rose (3x more concentrated than the previous generation) plus Micro-Filler rose-wax tech; Dior reports 20% fewer wrinkles in 1 hour (brand test). Rich texture suits dry winter skin; refillable jar. Last step before SPF.",
+  "Source": "https://www.lavanguardia.com/magazine/belleza/20261104/11672284/regenerador-rosa-granville.html",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "Dior",
+  "Link": "https://www.dior.com/en_ca/beauty/products/dior-prestige-la-creme-texture-riche-Y0000373.html",
+  "Product": "Dior Prestige La Crème Texture Riche (new Rosapeptide-3 formula, 50 mL)",
+  "Routine step": "9 Moisturizer",
+  "id": "p61"
+ },
+ {
+  "Price": "C $505.00 (30 mL, Augustinus Bader Canada official; same price at Sephora Canada)",
+  "Why it's trending": "Named one of the month's real prestige launches (Nov 6, 2026): the brand's first vitamin C serum, gentle ascorbyl glucoside + ergothioneine on Advanced TFC8. Fragrance-free, made for sensitive skin; brand trial reports uneven tone reduced 72% in 8 weeks. Also sold at Sephora Canada: https://www.sephora.com/ca/en/product/the-vitamin-c-P517674",
+  "Source": "https://traroro.com/new-prestige-beauty-launches-november-2026/",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "Augustinus Bader",
+  "Link": "https://augustinusbader.com/en-ca/products/the-vitamin-c-serum",
+  "Product": "The Vitamin C Serum (30 mL)",
+  "Routine step": "6 Serum/Ampoule",
+  "id": "p62"
+ },
+ {
+  "Price": "C $135.00 (20 mL, Dior Canada official; also at Sephora Canada)",
+  "Why it's trending": "Dior's take on the Korean PDRN skin-booster craze (new this fall, Harper's Bazaar): rice-derived phyto-PDRN + vitamin Cg + niacinamide in a 1-month 'shot'; Dior reports 25% more radiance instantly and 25% less visible dark spots in a month (brand test). Use after serum, before cream. Sephora Canada page: https://www.sephora.com/ca/en/product/dcapt-pdrn-shot-tb-20ml-int26-P527546",
+  "Source": "https://www.harpersbazaar.com.sg/beauty/news-trends/hottest-beauty-launches-everyone-talking-about",
+  "Status": "Trending",
+  "Category": "Skincare",
+  "Brand": "Dior",
+  "Link": "https://www.dior.com/en_ca/beauty/products/dior-capture-pdrn-shot-Y0000263.html",
+  "Product": "Dior Capture PDRN-Shot (20 mL)",
+  "Routine step": "6 Serum/Ampoule",
+  "id": "p63"
  }
 ]
